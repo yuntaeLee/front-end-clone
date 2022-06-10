@@ -1,0 +1,159 @@
+body {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #e5e5e5;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn {
+  height: 34px;
+  background: #eee linear-gradient(to bottom, #fcfcfc, #eee);
+  border: 1px solid #d5d5d5;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  padding: 0 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.4;
+  cursor: pointer;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.btn:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.07);
+}
+
+.input--text {
+  height: 34px;
+  padding: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+  background-color: transparent;
+  
+  /* inset: box 내부, x축 y축 길이 */
+  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.075);
+  font-size: 16px;
+  color: #e5e5e5;
+}
+.input--text::placeholder {
+  color: #e5e5e5;
+}
+
+.input--text:focus {
+  border-color: #51a7e8;
+  box-shadow: inset 0px 1px 2px rgba(0,0,0,0.075),
+              0 0 5px rgba(81,167,232,0.5);
+}
+
+
+#login-form {
+  margin-bottom: 10px;
+}
+
+
+#clock {
+  position: absolute;
+  top: 30vh;
+  font-size: 80px;
+}
+
+#greeting {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+#todo-form input {
+  width: 250px;
+}
+
+#todo-list {
+  margin-top: 10px;
+  position: absolute;
+  top: 55%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 30%;
+  width: 100%;
+}
+
+#todo-list li {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#todo-list span {
+  width: 100px;
+}
+
+#todo-list button {
+  margin-right: 10px;
+  background-color: transparent;
+  outline: none;
+}
+
+#quote {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 5%;
+  line-height: 20px;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+#quote span:last-child {
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+
+#weather {
+  display: flex;
+  flex-direction: column-reverse;
+  position: absolute;
+  top: 3%;
+  right: 5%;
+}
+
+.bgImage {
+  position: absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
+  animation: fadeIn .7s linear;
+}
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
